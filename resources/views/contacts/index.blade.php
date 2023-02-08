@@ -20,9 +20,9 @@
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New   <br>
                            
                         </a>
-                        
-                        <!-- <a href="{{ url('/data/') }}" class="btn btn-warning btn-sm " title="home page">
-                            <i class="fa fa-plus" aria-hidden="true"></i> home</a> -->
+                        <a href="{{ url('/product_category') }}" class="btn btn-warning btn-sm " title="home page">
+                            <i class="fa fa-plus" aria-hidden="true"></i> product category</a>
+                     
 
                         <br/>
                         <br/>

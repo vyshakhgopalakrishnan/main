@@ -1,4 +1,4 @@
-@extends('contacts.layout')
+@extends('frontpages.layout')
 @section('content')
  
 <div class="pt-5">

@@ -1,4 +1,4 @@
-@extends('contacts.layout')
+@extends('frontpages.layout')
 @section('content')
 @if ($errors->any())
     <div class="alert alert-danger">
@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
  
-            <div class="col-md-9">
+            <div class="col">
                 <div class="card">
                     <div class="card-header">product_category</div>
                     <div class="card-body">
@@ -20,6 +20,8 @@
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New   <br>
                            
                         </a>
+                        <a href="{{ url('/usersview/') }}" title="show Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>product</button></a><br><br>
+
                         
                         <!-- <a href="{{ url('/data/') }}" class="btn btn-warning btn-sm " title="home page">
                             <i class="fa fa-plus" aria-hidden="true"></i> home</a> -->
@@ -37,7 +39,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($product_category as $item)
+                                @foreach($frontpages as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->product_category }}</td>
@@ -46,7 +48,6 @@
                                         <td>
                                             <!-- <a href="{{ url('/contact/' . $item->id) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> -->
                                             <a href="{{ url('/product_category/' . $item->id . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a><br><br>
-                                            <a href="{{ url('/product_category/' . $item->id . '/view') }}" title="show Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>product</button></a><br><br>
 
                                             <form method="POST" action="{{ url('/product_category' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}

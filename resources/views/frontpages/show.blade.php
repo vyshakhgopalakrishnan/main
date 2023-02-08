@@ -1,4 +1,4 @@
-@extends('contacts.layout')
+@extends('frontpages.layout')
 @section('content')
  
  
@@ -8,7 +8,7 @@
    
  
         <div class="card-body">
-        <h5 class="card-title">product_category : {{ $contacts->product_category }}</h5>
+        <h5 class="card-title">product_category : {{ $frontpages->product_category }}</h5>
        
   </div>
        

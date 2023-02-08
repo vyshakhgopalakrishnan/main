@@ -4,7 +4,7 @@
 <div class="container">
         <div class="row">
  
-            <div class="col-md-9">
+            <div class="col">
                 <div class="card">
                     <div class="card-header">careers</div>
                     <div class="card-body">
@@ -13,7 +13,10 @@
                         </a>  
 
                         <a href="{{ url('/data/') }}" class="btn btn-warning btn-sm " title="home page">
-                            <i class="fa fa-plus" aria-hidden="true"></i> home</a>
+                            <i class="fa fa-plus" aria-hidden="true"></i> product category</a>
+                            <a href="{{ url('/contact/') }}" class="btn btn-success btn-sm" title="Add New Contact">
+                            <i class="fa fa-plus" aria-hidden="true"></i> variant
+                        </a>  
                         <br/>
                         <br/>
                         <div class="table-responsive">
@@ -43,9 +46,7 @@
                                         <td>
                                             <!-- <a href="{{ url('/usersview/' . $item->id) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> -->
                                             <a href="{{ url('/usersview/' . $item->id . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a><br><br>
-                                            <a href="{{ url('/contact/index') }}" class="btn btn-success btn-sm" title="Add New Contact">
-                            <i class="fa fa-plus" aria-hidden="true"></i> product
-                        </a>  <br>
+                                        <br>
                                             <form method="POST" action="{{ url('/usersview' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}

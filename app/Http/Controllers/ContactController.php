@@ -81,12 +81,12 @@ class ContactController extends Controller
            
             if($request->hasFile('image')){
                 
-             unlink(public_path().$contact->image);
-           
-                $fileName = time().$request->file('image')->getClientOriginalName();
-        $path = $request->file('image')->storeAs('images', $fileName, 'public');
-        $input["image"] = '/storage/'.$path;
-            }
+                unlink(public_path().$contact->image);
+              
+                   $fileName = time().$request->file('image')->getClientOriginalName();
+           $path = $request->file('image')->storeAs('images', $fileName, 'public');
+           $input["image"] = '/storage/'.$path;
+               }
             $contact->update($input);
             return redirect('contact')->with('message', 'Updated!');  
        

@@ -20,7 +20,7 @@
         <input type="text" name="price" id="price" value="{{$contacts->price}}" class="form-control"></br>
       
         <label>image</label></br>
-        <input type="text" name="image" id="image" value="{{$contacts->price}}" class="form-control"></br>
+        <input type="text" name="image" id="image" value="{{$contacts->image}}" class="form-control"></br>
         <input type="file" name="image" id="image" value="{{$contacts->image}}" class="form-control"></br>
         
         <input type="submit" value="Update" class="btn btn-success"></br>

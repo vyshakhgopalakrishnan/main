@@ -23,6 +23,6 @@ Route::get('/', function () {
 Route::resource('/usersview', UserController::class);
 Route::resource('/contact', ContactController::class);
 Route::resource('/product_category', frontpagecontroller::class);
-Route::get('data', function () {
-    return view('frontpages.create');
-});
+// Route::get('data', function () {
+//     return view('frontpages.create');
+// });

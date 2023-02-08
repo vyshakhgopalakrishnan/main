@@ -10,8 +10,8 @@ class frontpagecontroller extends Controller
     
         public function index()
         {
-            $product_category= product_category::orderBy('id','desc')->paginate();
-          return view ('frontpages.index')->with('frontpages', $product_category);
+            $frontpages= product_category::orderBy('id','desc')->paginate();
+          return view ('frontpages.index')->with('frontpages', $frontpages);
         }
     
         
@@ -30,9 +30,8 @@ class frontpagecontroller extends Controller
         public function store(Request $request)
         {
             $request->validate([
-                'product_name' => 'required',
-                'product_MRP' => 'required',
-                'product_selling_price' => 'required',
+                'product_category' => 'required',
+              
                
                 
             ]);
